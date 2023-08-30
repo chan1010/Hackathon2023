@@ -4,7 +4,7 @@ import ButtonUploadImage from '../components/button/ButtonUploadImage.vue';
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Navigation } from 'vue3-carousel'
 export default {
-    name: 'Albums',
+    name: 'CheckMedicine',
     components: {
         ButtonUploadImage,
         Carousel,

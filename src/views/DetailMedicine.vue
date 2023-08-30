@@ -19,9 +19,11 @@ export default {
         <button class="btn btn-primary">
             Remind
         </button>
-        <button class="btn btn-outline">
+        <router-link :to="{
+            name: 'CheckMedicine',
+        }" class="btn btn-outline">
             Upload
-        </button>
+        </router-link>
 
     </div>
     <div class="contenT-description">
@@ -77,8 +79,10 @@ img {
 .detail {
     margin-top: 32px;
 }
-.contenT-description{
+
+.contenT-description {
     text-align: left;
     padding: 32px 16px;
 
-}</style>
+}
+</style>
