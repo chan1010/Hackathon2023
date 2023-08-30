@@ -23,7 +23,7 @@
     width: 100%;
     display: grid;
     justify-content: space-between;
-    padding: 10px 5px;
+    padding: 16px 5px;
     background-color:#fff;
     border-top: 1px solid #f5f5f5;
     z-index: 3;
@@ -31,8 +31,8 @@
     letter-spacing: -0.09px;
     text-align: center;
     color: #222;
-    grid-template-columns: 1fr 1fr 1fr
-}
+    grid-template-columns: 1fr 1fr 1fr;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;}
 
 @supports (-webkit-touch-callout: none) {
     .bottom {
