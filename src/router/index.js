@@ -26,6 +26,14 @@ const routes = [
       title: "Hackathon - Medicine Detail",
     },
   },
+  {
+    path: "/remind-med",
+    name: "RemindDetail",
+    component: () => import("../views/RemindMedicine.vue"),
+    meta: {
+      title: "Hackathon - Medicine Detail",
+    },
+  },
 ];
 
 const router = createRouter({

@@ -31,10 +31,7 @@ export default {
 </script>
 
 <template>
-  <div class="content-button" >
-    <label class="community_file">
-
-    </label>
+  <div class="content-button">
     <label class="btn-upload">
       <input type="file" ref="file" id="upload_file"  v-on:change="handleFileUpload"/><i data-feather="plus-circle" width="3rem" height="3rem"></i>
     </label>
