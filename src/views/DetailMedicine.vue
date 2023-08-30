@@ -16,9 +16,11 @@ export default {
         <img src="https://images2.thanhnien.vn/Uploaded/nhutnq/2022_10_02/220928180903-03-dall-e-ai-2189.jpg">
     </div>
     <div class="list-btn">
-        <button class="btn btn-primary">
+        <router-link :to="{
+            name: 'RemindDetail',
+        }" class="btn btn-primary">
             Remind
-        </button>
+        </router-link>
         <router-link :to="{
             name: 'CheckMedicine',
         }" class="btn btn-outline">

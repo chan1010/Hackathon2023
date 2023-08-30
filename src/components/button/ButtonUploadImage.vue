@@ -9,9 +9,6 @@ export default {
 
 <template>
   <div class="content-button">
-    <label class="community_file">
-
-    </label>
     <label class="btn-upload">
       <input type="file" id="upload_file" /><i data-feather="plus-circle" width="3rem" height="3rem"></i>
     </label>
