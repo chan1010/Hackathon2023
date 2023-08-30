@@ -22,7 +22,7 @@ export default {
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
         font-size: 18px;
-        margin-bottom: 32px;
+        margin: 32px 0;
       ">
     Upload OR choose image form below
   </p>
@@ -40,7 +40,6 @@ label.btn-upload {
   width: 380px;
   background-color: rgba(128, 128, 128, 0.137);
   border-radius: 16px;
-  margin-bottom: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
