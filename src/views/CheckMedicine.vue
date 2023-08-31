@@ -21,19 +21,19 @@ export default {
                 id: 1,
                 image: 'https://hackathon2023teamv.s3.ap-southeast-1.amazonaws.com/Buscopan1.JPG'
             }, {
-                id: 1,
+                id: 2,
                 image: 'https://hackathon2023teamv.s3.ap-southeast-1.amazonaws.com/Efferalgan1.jpg'
             }, {
-                id: 1,
+                id: 3,
                 image: 'https://hackathon2023teamv.s3.ap-southeast-1.amazonaws.com/Livcaring1.JPG'
             }, {
-                id: 1,
+                id: 4,
                 image: 'https://hackathon2023teamv.s3.ap-southeast-1.amazonaws.com/panadol1.jpeg'
             }, {
-                id: 1,
+                id: 5,
                 image: 'https://hackathon2023teamv.s3.ap-southeast-1.amazonaws.com/Paracetamol1.JPG'
             }, {
-                id: 1,
+                id: 6,
                 image: 'https://hackathon2023teamv.s3.ap-southeast-1.amazonaws.com/Vinafolin1.JPG'
             }],
             isOpen: false,
