@@ -8,7 +8,7 @@ export default {
     };
   },
   methods: {
-    async handleFileUpload(event) {
+    handleFileUpload(event) {
       const file = event.target.files[0];
       this.med_image = URL.createObjectURL(file)
       this.isShow = true

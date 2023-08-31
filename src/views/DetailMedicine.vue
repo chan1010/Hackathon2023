@@ -12,7 +12,6 @@ export default {
     },
     async created() {
         this.DetailMedicine = await getDetailMed(this.$route.params.id)
-        console.log(this.DetailMedicine)
     },
 };
 </script>
