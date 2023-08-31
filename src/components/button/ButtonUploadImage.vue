@@ -1,6 +1,5 @@
 <script>
 import feather from "feather-icons";
-import  {upLoadImage}  from "../../services/Med";
 export default {
   data() {
     return {
@@ -13,7 +12,6 @@ export default {
       const file = event.target.files[0];
       this.med_image = URL.createObjectURL(file)
       this.isShow = true
-      await upLoadImage (file)
     },
     removeImage() {
       this.med_imag = ''
