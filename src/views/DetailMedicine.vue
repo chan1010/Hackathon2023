@@ -1,4 +1,6 @@
 <script>
+import { getDetailMed } from "../services/Med";
+
 export default {
     name: 'DetailMedicine',
     components: {
@@ -8,12 +10,16 @@ export default {
             DetailMedicine: {},
         };
     },
+    async created() {
+        this.DetailMedicine = await getDetailMed(this.$route.params.id)
+        console.log(this.DetailMedicine)
+    },
 };
 </script>
 
 <template class="bg-gray-50">
     <div class="content-image">
-        <img src="https://images2.thanhnien.vn/Uploaded/nhutnq/2022_10_02/220928180903-03-dall-e-ai-2189.jpg">
+        <img :src="`${DetailMedicine.med_image}`">
     </div>
     <div class="list-btn">
         <router-link :to="{
@@ -28,10 +34,16 @@ export default {
         </router-link>
 
     </div>
-    <div class="contenT-description">
-        <div class="h6">NAME THUOC</div>
-        <p class="detail">
-            content-image
+    <div class="content-description">
+        <h5 class="med-name">{{ DetailMedicine.med_name }}</h5>
+        <p class="med-des">
+            {{ DetailMedicine.med_description }}
+        </p>
+        <p class=" med_dosage">
+            {{ DetailMedicine.med_dosage }}
+        </p>
+        <p class="med_notes">
+            {{ DetailMedicine.med_notes }}
         </p>
     </div>
 </template>
@@ -47,6 +59,7 @@ img {
     width: 380px;
     height: 252px;
     border-radius: 8px;
+    object-fit: cover;
 }
 
 .list-btn {
@@ -78,13 +91,26 @@ img {
     color: #40bfb4;
 }
 
-.detail {
+.med-name {
+    text-transform: uppercase;
+    font-size: large;
+    font-weight: 700;
+}
+
+.med-des {
     margin-top: 32px;
 }
 
-.contenT-description {
-    text-align: left;
+.content-description {
+    text-align: justify;
     padding: 32px 16px;
 
 }
-</style>
+
+p {
+    color: #003462;
+}
+
+p+p {
+    margin-top: 16px;
+}</style>

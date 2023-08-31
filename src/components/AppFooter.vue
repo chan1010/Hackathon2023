@@ -30,7 +30,7 @@
     font-size: 9px;
     letter-spacing: -0.09px;
     text-align: center;
-    color: #222;
+    color: #003462;
     grid-template-columns: 1fr 1fr 1fr;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;}
 
