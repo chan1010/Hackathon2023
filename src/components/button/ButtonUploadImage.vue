@@ -1,37 +1,32 @@
 <script>
 import feather from "feather-icons";
-// import { publicRequest } from "../../services/requestMethod";
-import axios from "axios";
+import { publicRequest } from "../../services/requestMethod";
 export default {
   mounted() {
     feather.replace();
   },
   methods: {
-    async handleFileUpload() {
-      
+    handleFileUpload() {
       var file = this.$refs.file.files[0];
       console.log(file)
-      await axios({
-        method: 'post',
-        url: `https://4a1cwmmf9a.execute-api.ap-southeast-1.amazonaws.com/staging/medicine`,
-        data: {
-          image: file
-        },
-        headers: { 
-          "Content-Type": "multipart/form-data"
-        }
-      }).then((res) => {
-        console.log(res);
-      });
 
-      console.log(this.file);
+      const form = new FormData();
+      form.append('image', file);
+
+      publicRequest.post("/medicine", form).then((res) => {
+        // console.log(res);
+        alert(res.Label);
+      });
     },
   },
 };
 </script>
 
 <template>
-  <div class="content-button">
+  <div class="content-button" >
+    <label class="community_file">
+
+    </label>
     <label class="btn-upload">
       <input type="file" ref="file" id="upload_file"  v-on:change="handleFileUpload"/><i data-feather="plus-circle" width="3rem" height="3rem"></i>
     </label>

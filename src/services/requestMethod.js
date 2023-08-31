@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://4a1cwmmf9a.execute-api.ap-southeast-1.amazonaws.com/staging";
+const BASE_URL = "https://6iu85afshh.execute-api.ap-southeast-1.amazonaws.com/";
 
 export const publicRequest = axios.create({
   baseURL: BASE_URL,
