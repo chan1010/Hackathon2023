@@ -1,5 +1,6 @@
 <script>
 import feather from "feather-icons";
+import { publicRequest } from "../../services/requestMethod";
 export default {
   data() {
     return {
@@ -7,28 +8,38 @@ export default {
       isShow: false
     };
   },
+  mounted() {
+    feather.replace();
+  },
   methods: {
-    handleFileUpload(event) {
-      const file = event.target.files[0];
+    handleFileUpload() {
+      var file = this.$refs.file.files[0];
       this.med_image = URL.createObjectURL(file)
       this.isShow = true
+      const form = new FormData();
+      form.append('image', file);
+
+      publicRequest.post("/medicine", form).then((res) => {
+        // console.log(res);
+        alert(res.data.Label);
+      });
     },
     removeImage() {
       this.med_imag = ''
       this.isShow = false
     }
   },
-  mounted() {
-    feather.replace();
-  },
 };
 </script>
 
 <template>
-  <div class="content-button">
+  <div class="content-button" >
+    <label class="community_file">
+
+    </label>
     <label class="btn-upload">
       <div class="empty-img" v-if="!isShow">
-        <input type="file" id="upload_file" @change="handleFileUpload" /><svg xmlns="http://www.w3.org/2000/svg"
+        <input type="file" ref="file" id="upload_file" @change="handleFileUpload" /><svg xmlns="http://www.w3.org/2000/svg"
           width="21" height="21" viewBox="0 0 21 21">
           <path data-name="패스 1092" d="M1 5h20" transform="translate(-.5 5.5)"
             style="fill:none;stroke:gray;stroke-linecap:round;stroke-linejoin:round" />
