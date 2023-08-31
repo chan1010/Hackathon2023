@@ -1,5 +1,6 @@
 <script>
 import feather from "feather-icons";
+import  {upLoadImage}  from "../../services/Med";
 export default {
   data() {
     return {
@@ -8,10 +9,11 @@ export default {
     };
   },
   methods: {
-    handleFileUpload(event) {
+    async handleFileUpload(event) {
       const file = event.target.files[0];
       this.med_image = URL.createObjectURL(file)
       this.isShow = true
+      await upLoadImage (file)
     },
     removeImage() {
       this.med_imag = ''
@@ -74,7 +76,6 @@ export default {
     OR choose image form below
   </p>
 </template>
-
 <style scoped>
 .content-button {
   display: flex;
